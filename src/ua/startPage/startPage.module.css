@@ -1,0 +1,22 @@
+.bg{
+    background: url(../../assets/instruction-bg.png)no-repeat center top/cover;
+    height: 100vh;
+    padding: 30px 0;
+}
+.sova{
+    width: 50%;
+}
+.counter{
+    width: 80px;
+    color: #fff;
+    background: #784ce3;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 30px auto;
+    border: 7px solid #4a00ff;
+}

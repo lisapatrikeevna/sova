@@ -1,0 +1,79 @@
+.bg{
+    background: url(../../assets/scene-bg.png)no-repeat center top/cover;
+    height: 100vh;
+    padding: 30px 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    align-items: center;
+    padding: 10px;
+}
+.startTime{
+    background: url(../../assets/timer-bg.png)no-repeat center top/cover;
+    width: 206px;
+    display: flex;
+    height: 108px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.offer{
+    height: 75%;
+    display: flex;
+    justify-content: space-around;
+}
+.offer h2{
+    font-size: 27px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 2px 1px 2px #000;
+}
+.sovaWrap{
+    width: 80%;
+}
+.sova{
+    /*width: 130px;*/
+    width: 83px;
+    margin: 40px auto;
+}
+.progressBarWrap{
+    width: 17px;
+    background: #fff;
+    border: 3px solid;
+    height: 400px;
+    position: relative;
+    border-radius: 20px;
+}
+.innerProgress{
+    width: 17px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 5px 5px;
+}
+.foot{
+    width: 90px;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    height: 9%;
+    align-items: center;
+    position: relative;
+}
+.arrow{
+    width: 50px;
+    border: 3px solid;
+    border-color: transparent;
+}
+.finish{
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+}

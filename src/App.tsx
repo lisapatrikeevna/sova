@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Offer from './ua/offer/offer'
+import StartPage from "./ua/startPage/startPage"
+import MainPage from "./ua/manePage/mainPage"
+import {Route} from "react-router-dom"
+
+
+export const PATH = {
+    OFFER: "/Offer",
+    START: '/startPage',
+    MANE: '/mainPage'
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Route path={'/'} render={() => <Offer/>}/>
+            <Route path={PATH.START} render={() => <StartPage/>}/>
+            <Route path={PATH.MANE} render={() => <MainPage/>}/>
+        </div>
+    );
 }
 
 export default App;

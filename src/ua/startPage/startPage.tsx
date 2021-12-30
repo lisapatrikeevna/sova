@@ -15,8 +15,8 @@ const StartPage = () => {
                 }
             }
         }, 3000)
-        if (counter === 3) {
-            return <Redirect to={PATH.MANE}/>
+        if (counter === 0) {
+            return <Redirect to={PATH.MAIN}/>
         }
 
         return (

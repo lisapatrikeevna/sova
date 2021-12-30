@@ -9,7 +9,6 @@ import sovaBack from './../../assets/sova-back.png'
 import footRight from './../../assets/foot-right.png'
 import footRProgress from './../../assets/footR_progress.png'
 import cross from './../../assets/cross.png'
-import ProgressBar from "./progressBar";
 
 
 
@@ -80,7 +79,7 @@ const MainPage = () => {
         <div className={cl.bg}>
             <div className={cl.header}>
                 <div className={cl.startTime}>0:{startTime}</div>
-                <div>goal</div>
+                <div className={cl.text}>goal</div>
             </div>
             <div className={cl.offer}>
                 <div className={cl.sovaWrap}>
@@ -91,9 +90,8 @@ const MainPage = () => {
                     {startTime===30? <h2>get ready!</h2>: ''}
                 </div>
                 <div className={cl.progressBarWrap}>
-                    <div style={progressStyle} className={cl.innerProgress}>&#128099;</div>
+                    <div style={progressStyle} className={cl.innerProgress}><span style={{fontSize:'27px',marginTop: '-10px',marginLeft: '-10px'}}>&#128099;</span></div>
                 </div>
-                {/*<ProgressBar progress={foot===usersLegs} time={startTime}/>*/}
             </div>
             <div className={cl.footer}>
                 <img src={left} alt="left" className={cl.arrow} style={{borderColor: usersLegs===0 ? '#000': 'transparent' }}/>

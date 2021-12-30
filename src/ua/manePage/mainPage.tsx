@@ -38,7 +38,6 @@ const MainPage = () => {
             setFoot(-1)
             setUsersLegs(-1)
             setStartTime(startTime -= 1)
-            // setStartTime(startTime += 1)
             setTimeout(timer, speed);
         }
     };
@@ -47,33 +46,27 @@ const MainPage = () => {
             let res = Math.floor(Math.random()*2)
             setFoot(res)
             setUsersLegs(res)
-            setProgressBar(progressBar += 1)
-            setTimeout(changeFoot,6000)
+            if(sovaFront && foot===usersLegs){setProgressBar(progressBar += 1)}
+            else if (!sovaFront && usersLegs ===-1){setProgressBar(progressBar += 1)}
+            else if (!sovaFront && usersLegs !==-1){setStartTime(0)}
+            setTimeout(changeFoot,3500)
         }
     }
     const changeSovaFront = ()=>{
         if(startTime > 0){
             let res = Math.floor(Math.random()*2)
             setSovaFront(!!res)
-            // console.log('changeSovaFront',!!res);
             setTimeout(changeSovaFront,9000)
         }
     }
-    const changeUsersLegs = ()=>{
-        if(startTime > 0){
-            // debugger
-            // let res = Math.floor(Math.random()*2)
-            // setUsersLegs(res)
-            // setUsersLegs(foot)
-            // console.log('changeUsersLegs',progressBar+1);
-            console.log('before progressBar',progressBar);
-            // if(foot===res){
-                setProgressBar(progressBar+1)
-            console.log('after progressBar',progressBar);
-                // console.log('changeUsersLegs',foot===res);}
-            setTimeout(changeUsersLegs,6000)
-        }
-    }
+    // const changeUsersLegs = ()=>{
+    //     if(startTime > 0){
+    //         // setUsersLegs(res)
+    //         // if(foot===res){
+    //             setProgressBar(progressBar+1)
+    //         setTimeout(changeUsersLegs,6000)
+    //     }
+    // }
 
     return (
         <div className={cl.bg}>
@@ -88,9 +81,12 @@ const MainPage = () => {
                         <img src={sovaBack} alt="sovaBack" className={cl.sova}/>
                     }
                     {startTime===30? <h2>get ready!</h2>: ''}
+                    {startTime===0? <h2>finish!</h2>: ''}
                 </div>
                 <div className={cl.progressBarWrap}>
-                    <div style={progressStyle} className={cl.innerProgress}><span style={{fontSize:'27px',marginTop: '-10px',marginLeft: '-10px'}}>&#128099;</span></div>
+                    <div style={progressStyle} className={cl.innerProgress}>
+                        <span style={{fontSize:'27px',marginTop: '-14px',marginLeft: '-10px',display: 'block'}}>&#128099;</span>
+                    </div>
                 </div>
             </div>
             <div className={cl.footer}>
